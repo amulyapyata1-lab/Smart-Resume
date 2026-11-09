@@ -1,0 +1,242 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f4f9;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* Header */
+
+.header {
+    background: #17365d;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+.header h1 {
+    font-size: 32px;
+}
+
+.header p {
+    margin-top: 5px;
+}
+
+/* Main layout */
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    max-width: 1400px;
+    margin: 30px auto;
+    padding: 0 20px;
+    align-items: start;
+}
+
+.form-section,
+.preview-section {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+h2 {
+    color: #17365d;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #17365d;
+    margin-top: 22px;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #dce5f0;
+    padding-bottom: 6px;
+}
+
+/* Form elements */
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 14px;
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ccd4df;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+
+textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 4px rgba(37,99,235,0.25);
+}
+
+/* Buttons */
+
+button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #17365d;
+}
+
+.clear-btn {
+    background: #dc3545;
+    margin-top: 20px;
+}
+
+.clear-btn:hover {
+    background: #a71d2a;
+}
+
+.preview-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* Resume design */
+
+.resume {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 35px;
+    min-height: 800px;
+    color: #333;
+    overflow-wrap: anywhere;
+}
+
+.resume-header {
+    text-align: center;
+    border-bottom: 3px solid #17365d;
+    padding-bottom: 20px;
+}
+
+.resume-header h1 {
+    color: #17365d;
+    font-size: 28px;
+    overflow-wrap: anywhere;
+}
+
+.resume-header h3 {
+    border: none;
+    margin: 5px 0;
+    color: #555;
+}
+
+.resume-header p {
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+.resume-content h3 {
+    font-size: 16px;
+    margin-top: 24px;
+    color: #17365d;
+    border-bottom: 1px solid #17365d;
+}
+
+.resume-content p {
+    font-size: 14px;
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    background: #17365d;
+    color: white;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+/* Responsive design */
+
+@media (max-width: 900px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* PDF printing */
+
+@media print {
+
+    @page {
+        size: A4;
+        margin: 12mm;
+    }
+
+    body {
+        background: white;
+    }
+
+    .header,
+    .form-section,
+    footer,
+    .preview-heading {
+        display: none !important;
+    }
+
+    .container {
+        display: block;
+        margin: 0;
+        padding: 0;
+        max-width: none;
+    }
+
+    .preview-section {
+        padding: 0;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .resume {
+        border: none;
+        padding: 0;
+        min-height: auto;
+    }
+
+    .resume-content h3 {
+        break-after: avoid;
+    }
+
+    .resume-content p {
+        orphans: 2;
+        widows: 2;
+    }
+}

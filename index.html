@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartResume - Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <h1>SmartResume</h1>
+    <p>Build Your Professional Resume</p>
+</header>
+
+<main class="container">
+
+    <section class="form-section">
+        <h2>Create Your Resume</h2>
+
+        <form id="resumeForm">
+
+            <h3>Personal Information</h3>
+
+            <label>Full Name</label>
+            <input type="text" id="name" placeholder="Enter your full name">
+
+            <label>Email Address</label>
+            <input type="email" id="email" placeholder="Enter your email">
+
+            <label>Phone Number</label>
+            <input type="tel" id="phone" placeholder="Enter your phone number">
+
+            <label>Location</label>
+            <input type="text" id="location" placeholder="City, State">
+
+            <label>Professional Title</label>
+            <input type="text" id="jobTitle" placeholder="Example: Computer Science Student">
+
+            <h3>Career Objective</h3>
+
+            <textarea id="objective"
+                placeholder="Write your career objective"></textarea>
+
+            <h3>Education</h3>
+
+            <textarea id="education"
+                placeholder="B.Tech CSE - College Name&#10;Year: 2024-2028&#10;CGPA: 8.5"></textarea>
+
+            <h3>Technical Skills</h3>
+
+            <textarea id="skills"
+                placeholder="Python, Java, HTML, CSS, JavaScript"></textarea>
+
+            <h3>Projects</h3>
+
+            <textarea id="projects"
+                placeholder="Project Name: SmartResume&#10;Description: Developed a resume builder website"></textarea>
+
+            <h3>Internship / Experience</h3>
+
+            <textarea id="experience"
+                placeholder="Company name, role and experience"></textarea>
+
+            <h3>Certifications and Achievements</h3>
+
+            <textarea id="certifications"
+                placeholder="Enter your certifications and achievements"></textarea>
+
+            <button type="button" id="clearBtn" class="clear-btn">
+                Clear Form
+            </button>
+
+        </form>
+    </section>
+
+    <section class="preview-section">
+        <div class="preview-heading">
+            <h2>Resume Preview</h2>
+            <button type="button" id="downloadBtn">
+                Download / Print PDF
+            </button>
+        </div>
+
+        <div class="resume" id="resumePreview">
+
+            <div class="resume-header">
+                <h1 id="previewName">Your Name</h1>
+                <h3 id="previewJob">Professional Title</h3>
+                <p id="previewContact">
+                    Email | Phone | Location
+                </p>
+            </div>
+
+            <div class="resume-content">
+
+                <h3>CAREER OBJECTIVE</h3>
+                <p id="previewObjective">Your career objective will appear here.</p>
+
+                <h3>EDUCATION</h3>
+                <p id="previewEducation">Your education details will appear here.</p>
+
+                <h3>TECHNICAL SKILLS</h3>
+                <p id="previewSkills">Your skills will appear here.</p>
+
+                <h3>PROJECTS</h3>
+                <p id="previewProjects">Your projects will appear here.</p>
+
+                <h3>INTERNSHIP / EXPERIENCE</h3>
+                <p id="previewExperience">Your experience will appear here.</p>
+
+                <h3>CERTIFICATIONS AND ACHIEVEMENTS</h3>
+                <p id="previewCertifications">Your certifications will appear here.</p>
+
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 SmartResume | Create Your Future</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
